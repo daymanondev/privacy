@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Goal Partner — Xóa tài khoản &amp; dữ liệu / Account Deletion</title>
+  <style>
+    :root {
+      --bg: #fcfdfb;
+      --surface: #ffffff;
+      --soft: #f1f4ed;
+      --sage: #e9f0e5;
+      --ink: #183c30;
+      --text: #253c32;
+      --muted: #556358;
+      --line: #dfe5dc;
+      --accent: #214f3d;
+      --danger: #9b322b;
+      --danger-bg: #fdf3f2;
+      --danger-line: #efc8c4;
+      --link: #163c2d;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111815;
+        --surface: #17211d;
+        --soft: #1d2a24;
+        --sage: #22352c;
+        --ink: #eef5ef;
+        --text: #dce7de;
+        --muted: #a6b7aa;
+        --line: #2b3d34;
+        --accent: #9bd0b3;
+        --danger: #f08a82;
+        --danger-bg: #2b1817;
+        --danger-line: #5b2e2b;
+        --link: #9bd0b3;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--link);
+      text-underline-offset: 3px;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
+    .wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 28px 20px 64px;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 18px;
+      margin-bottom: 24px;
+    }
+
+    .brand {
+      display: inline-block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.9rem;
+      line-height: 1.25;
+    }
+
+    .meta {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .nav-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0 10px;
+    }
+
+    .nav-bar a {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    .nav-bar a[aria-current="page"] {
+      background: var(--sage);
+      border-color: var(--accent);
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .lang-jump {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin: 12px 0 0;
+      font-size: 0.92rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 18px 0;
+    }
+
+    .card-danger {
+      background: var(--danger-bg);
+      border: 1px solid var(--danger-line);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 18px 0;
+    }
+
+    .card-danger strong.label {
+      color: var(--danger);
+    }
+
+    section.lang-section {
+      margin-top: 28px;
+      padding-top: 8px;
+    }
+
+    section.lang-section + section.lang-section {
+      border-top: 2px solid var(--line);
+      margin-top: 40px;
+      padding-top: 28px;
+    }
+
+    h2 {
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.45rem;
+      margin: 0 0 12px;
+    }
+
+    h3 {
+      color: var(--ink);
+      font-size: 1.08rem;
+      margin: 22px 0 8px;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    ol, ul {
+      margin: 8px 0 14px;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.88em;
+      background: var(--soft);
+      padding: 2px 6px;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+    }
+
+    footer {
+      margin-top: 44px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <span class="brand">Goal Partner · Account &amp; Data Deletion</span>
+      <h1>Xóa tài khoản &amp; dữ liệu / Account &amp; Data Deletion</h1>
+      <p class="meta">
+        Ứng dụng / App: <strong>Goal Partner</strong> (<code>com.daymanondev.goalpartner</code>, v1.0.0) ·
+        Hỗ trợ / Support: <a href="mailto:dungpasoftware@gmail.com">dungpasoftware@gmail.com</a>
+      </p>
+
+      <nav class="nav-bar" aria-label="Legal navigation">
+        <a href="./">Chính sách bảo mật / Privacy Policy</a>
+        <a href="support.html">Hỗ trợ / Support</a>
+        <a href="account-deletion.html" aria-current="page">Xóa tài khoản / Account Deletion</a>
+      </nav>
+
+      <div class="lang-jump" aria-label="Language jump links">
+        <a href="#vi">Hướng dẫn Tiếng Việt</a>
+        <a href="#en">Instructions in English (en-US)</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="vi" lang="vi" class="lang-section">
+        <h2>Tiếng Việt — Hướng dẫn xóa tài khoản &amp; dữ liệu</h2>
+
+        <p>Bạn có thể xóa dữ liệu cá nhân trực tiếp ngay trong ứng dụng Goal Partner hoặc gửi yêu cầu xóa vĩnh viễn toàn bộ tài khoản đăng nhập qua email hỗ trợ.</p>
+
+        <div class="card">
+          <h3>Cách 1: Xóa toàn bộ dữ liệu không gian làm việc ngay trong ứng dụng (Chế độ Tài khoản)</h3>
+          <ol>
+            <li>Mở ứng dụng <strong>Goal Partner</strong> và đăng nhập vào tài khoản của bạn.</li>
+            <li>Chọn tab <strong>Cá nhân</strong> ở thanh điều hướng phía dưới.</li>
+            <li>Chọn mục <strong>Dữ liệu &amp; quyền riêng tư</strong>.</li>
+            <li>Nhấn nút <strong>Xóa dữ liệu tài khoản</strong>.</li>
+            <li>Trong hộp thoại xác nhận, chọn <strong>Xóa toàn bộ dữ liệu</strong> (không thể hoàn tác).</li>
+          </ol>
+          <p><strong>Phạm vi dữ liệu được xóa ngay lập tức trên máy chủ:</strong> Toàn bộ mục tiêu, cột mốc, công việc, chuỗi lặp, ghi chú, các lần nhìn lại/nhật ký, thông báo và trạng thái đã đọc đều bị xóa vĩnh viễn; tùy chọn thông báo được đặt về mặc định và bản nháp hướng dẫn khởi tạo cục bộ được dọn sạch. Tên hiển thị và thông tin đăng nhập tài khoản (<code>auth.users</code>) được giữ lại nếu bạn muốn bắt đầu lại từ đầu.</p>
+        </div>
+
+        <div class="card-danger">
+          <h3>Cách 2: Yêu cầu xóa vĩnh viễn hoàn toàn tài khoản đăng nhập (<code>auth.users</code> &amp; hồ sơ)</h3>
+          <p><strong class="label">Để xóa cả danh tính đăng nhập và hồ sơ trên máy chủ</strong> (không chỉ xóa dữ liệu mục tiêu):</p>
+          <ol>
+            <li>Thực hiện trước bước <strong>Cá nhân &rarr; Dữ liệu &amp; quyền riêng tư &rarr; Xóa dữ liệu tài khoản</strong> (khuyến nghị), hoặc yêu cầu xóa đồng thời cả dữ liệu không gian làm việc và tài khoản.</li>
+            <li>Gửi email tới <a href="mailto:dungpasoftware@gmail.com?subject=Yeu%20cau%20xoa%20tai%20khoan%20Goal%20Partner">dungpasoftware@gmail.com</a> với tiêu đề <code>Yêu cầu xóa tài khoản Goal Partner</code>.</li>
+            <li>Vui lòng gửi từ địa chỉ email đã đăng ký (hoặc nêu rõ phương thức đăng nhập: Apple, Google hay số điện thoại đã dùng và tên hiển thị) để chúng tôi xác minh đúng chủ tài khoản.</li>
+          </ol>
+          <p><strong>Thời gian xử lý &amp; dữ liệu bị xóa:</strong> Yêu cầu hợp lệ sẽ được xử lý hoàn tất trong vòng <strong>7 ngày làm việc</strong>. Toàn bộ bản ghi xác thực (<code>auth.users</code>), hồ sơ (<code>profiles</code>) và mọi dữ liệu không gian làm việc còn lại gắn với tài khoản sẽ bị xóa vĩnh viễn khỏi cơ sở dữ liệu sản phẩm và không thể khôi phục.</p>
+        </div>
+
+        <div class="card">
+          <h3>Cách 3: Xóa dữ liệu ở chế độ Tài khoản mẫu (trên thiết bị)</h3>
+          <ul>
+            <li>Vào <strong>Cá nhân &rarr; Dữ liệu &amp; quyền riêng tư &rarr; Xóa dữ liệu bản mẫu &rarr; Xóa toàn bộ dữ liệu</strong> để xóa dữ liệu bạn đã tạo trên thiết bị và trở về dữ liệu minh họa ban đầu.</li>
+            <li>Hoặc gỡ cài đặt ứng dụng Goal Partner khỏi thiết bị để xóa toàn bộ dữ liệu <code>AsyncStorage</code> cục bộ.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="en" lang="en" class="lang-section">
+        <h2>English (en-US) — Account &amp; Data Deletion</h2>
+
+        <p>Goal Partner lets you wipe your workspace data directly inside the app and also provides a verified support flow to permanently delete your entire authentication account.</p>
+
+        <div class="card">
+          <h3>Option 1: In-App Account Workspace Deletion (Signed-In Accounts)</h3>
+          <ol>
+            <li>Open <strong>Goal Partner</strong> while signed into your account.</li>
+            <li>Tap the <strong>Cá nhân</strong> (Profile) tab in the bottom navigation bar.</li>
+            <li>Open <strong>Dữ liệu &amp; quyền riêng tư</strong> (Data &amp; Privacy).</li>
+            <li>Tap <strong>Xóa dữ liệu tài khoản</strong> (Delete Account Data).</li>
+            <li>Confirm by tapping <strong>Xóa toàn bộ dữ liệu</strong> (Delete All Data). This action cannot be undone.</li>
+          </ol>
+          <p><strong>What is deleted immediately on the server:</strong> All of your goals, milestones, tasks, recurring task series, notes, periodic reviews/journal entries, notifications, and read states are permanently deleted; notification preferences are reset to defaults and local onboarding draft state is cleared. Your display name and authentication identity (<code>auth.users</code>) remain intact so you can start fresh if desired.</p>
+        </div>
+
+        <div class="card-danger">
+          <h3>Option 2: Full Authentication Account Deletion (<code>auth.users</code> &amp; Profile)</h3>
+          <p><strong class="label">To permanently close your login account and erase your profile</strong> (in addition to workspace content):</p>
+          <ol>
+            <li>Optionally run <strong>Cá nhân &rarr; Dữ liệu &amp; quyền riêng tư &rarr; Xóa dữ liệu tài khoản</strong> in the app first, or request full closure directly.</li>
+            <li>Email <a href="mailto:dungpasoftware@gmail.com?subject=Goal%20Partner%20Account%20Deletion%20Request">dungpasoftware@gmail.com</a> with the subject <code>Goal Partner Account Deletion Request</code>.</li>
+            <li>Send the request from your registered email address (or state your sign-in method — Apple, Google, or Phone — and display name) so we can verify account ownership.</li>
+          </ol>
+          <p><strong>Processing timeline &amp; scope:</strong> Verified deletion requests are completed within <strong>7 business days</strong>. We permanently delete your <code>auth.users</code> authentication record, <code>profiles</code> row, and any remaining user-scoped workspace rows from our production PostgreSQL database.</p>
+        </div>
+
+        <div class="card">
+          <h3>Option 3: Demo Mode On-Device Data Deletion</h3>
+          <ul>
+            <li>In Demo Mode, go to <strong>Cá nhân &rarr; Dữ liệu &amp; quyền riêng tư &rarr; Xóa dữ liệu bản mẫu &rarr; Xóa toàn bộ dữ liệu</strong> to erase your changes and restore the initial sample dataset.</li>
+            <li>Uninstall Goal Partner from your device to delete all local <code>AsyncStorage</code> data and session keys.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Goal Partner (<code>com.daymanondev.goalpartner</code>) · <a href="./">Privacy Policy</a> · <a href="support.html">Support</a> · <a href="mailto:dungpasoftware@gmail.com">dungpasoftware@gmail.com</a></p>
+    </footer>
+  </div>
+</body>
+</html>
