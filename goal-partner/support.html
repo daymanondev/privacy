@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Goal Partner — Hỗ trợ / Support</title>
+  <style>
+    :root {
+      --bg: #fcfdfb;
+      --surface: #ffffff;
+      --soft: #f1f4ed;
+      --sage: #e9f0e5;
+      --ink: #183c30;
+      --text: #253c32;
+      --muted: #556358;
+      --line: #dfe5dc;
+      --accent: #214f3d;
+      --link: #163c2d;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111815;
+        --surface: #17211d;
+        --soft: #1d2a24;
+        --sage: #22352c;
+        --ink: #eef5ef;
+        --text: #dce7de;
+        --muted: #a6b7aa;
+        --line: #2b3d34;
+        --accent: #9bd0b3;
+        --link: #9bd0b3;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--link);
+      text-underline-offset: 3px;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
+    .wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 28px 20px 64px;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 18px;
+      margin-bottom: 24px;
+    }
+
+    .brand {
+      display: inline-block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.9rem;
+      line-height: 1.25;
+    }
+
+    .meta {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .nav-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0 10px;
+    }
+
+    .nav-bar a {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    .nav-bar a[aria-current="page"] {
+      background: var(--sage);
+      border-color: var(--accent);
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .lang-jump {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin: 12px 0 0;
+      font-size: 0.92rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 18px 0;
+    }
+
+    .card-soft {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px 20px;
+      margin: 18px 0;
+    }
+
+    section.lang-section {
+      margin-top: 28px;
+      padding-top: 8px;
+    }
+
+    section.lang-section + section.lang-section {
+      border-top: 2px solid var(--line);
+      margin-top: 40px;
+      padding-top: 28px;
+    }
+
+    h2 {
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.45rem;
+      margin: 0 0 12px;
+    }
+
+    h3 {
+      color: var(--ink);
+      font-size: 1.08rem;
+      margin: 22px 0 8px;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    ul {
+      margin: 8px 0 14px;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.88em;
+      background: var(--soft);
+      padding: 2px 6px;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+    }
+
+    footer {
+      margin-top: 44px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <span class="brand">Goal Partner · Support</span>
+      <h1>Hỗ trợ / Support</h1>
+      <p class="meta">
+        Ứng dụng / App: <strong>Goal Partner</strong> (<code>com.daymanondev.goalpartner</code>, v1.0.0) ·
+        Email hỗ trợ / Support Email: <a href="mailto:dungpasoftware@gmail.com">dungpasoftware@gmail.com</a>
+      </p>
+
+      <nav class="nav-bar" aria-label="Legal navigation">
+        <a href="./">Chính sách bảo mật / Privacy Policy</a>
+        <a href="support.html" aria-current="page">Hỗ trợ / Support</a>
+        <a href="account-deletion.html">Xóa tài khoản / Account Deletion</a>
+      </nav>
+
+      <div class="lang-jump" aria-label="Language jump links">
+        <a href="#vi">Hỗ trợ bằng Tiếng Việt</a>
+        <a href="#en">Support in English (en-US)</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="vi" lang="vi" class="lang-section">
+        <h2>Tiếng Việt — Trung tâm hỗ trợ</h2>
+
+        <div class="card-soft">
+          <p><strong>Liên hệ trực tiếp:</strong> Gửi email tới <a href="mailto:dungpasoftware@gmail.com">dungpasoftware@gmail.com</a>. Chúng tôi phản hồi trong vòng <strong>2&ndash;3 ngày làm việc</strong>.</p>
+        </div>
+
+        <h3>1. Các câu hỏi thường gặp</h3>
+
+        <div class="card">
+          <p><strong>Tôi có thể trải nghiệm ứng dụng mà không cần đăng ký tài khoản không?</strong></p>
+          <p>Có. Tại màn hình đăng nhập, chọn <strong>Dùng tài khoản mẫu</strong> để trải nghiệm ngay với dữ liệu minh họa có sẵn. Mọi dữ liệu trong chế độ tài khoản mẫu chỉ lưu trên thiết bị của bạn thông qua <code>AsyncStorage</code> và không đồng bộ lên máy chủ.</p>
+        </div>
+
+        <div class="card">
+          <p><strong>Chế độ &ldquo;Hôm nay mình hơi bận&rdquo; hoạt động thế nào?</strong></p>
+          <p>Trong tab <strong>Hôm nay</strong>, khi lịch trình dày đặc, bạn có thể nhấn <strong>Hôm nay mình hơi bận</strong> để xem trước và áp dụng một bước nhỏ vừa sức trong ngày, giữ nhịp tiến độ mà không quá tải. Nếu muốn quay lại kế hoạch trước đó, hãy nhấn <strong>Hoàn tác</strong>.</p>
+        </div>
+
+        <div class="card">
+          <p><strong>Tại sao một số tùy chọn đăng nhập (Apple, Google, Số điện thoại) hiển thị trạng thái chưa khả dụng?</strong></p>
+          <p>Các phương thức đăng nhập tài khoản chỉ hoạt động khi cấu hình dịch vụ xác thực Supabase phía sau được bật cho bản phát hành tương ứng. Khi dịch vụ chưa được bật, ứng dụng giữ nút ở trạng thái vô hiệu hóa minh bạch và bạn vẫn có thể sử dụng đầy đủ chế độ <strong>Dùng tài khoản mẫu</strong>.</p>
+        </div>
+
+        <div class="card">
+          <p><strong>Ứng dụng có gửi thông báo đẩy hệ thống (push notifications) không?</strong></p>
+          <p>Phiên bản 1.0.0 hỗ trợ quản lý tùy chọn thông báo và danh sách thông báo bên trong ứng dụng; thông báo đẩy hệ điều hành và AI Coach chưa nằm trong phạm vi bản phát hành này.</p>
+        </div>
+
+        <h3>2. Xóa dữ liệu &amp; xóa tài khoản</h3>
+        <ul>
+          <li><strong>Đặt lại dữ liệu bản mẫu (trên thiết bị):</strong> Vào <strong>Cá nhân &rarr; Dữ liệu &amp; quyền riêng tư &rarr; Xóa dữ liệu bản mẫu</strong>.</li>
+          <li><strong>Xóa dữ liệu không gian làm việc của tài khoản:</strong> Vào <strong>Cá nhân &rarr; Dữ liệu &amp; quyền riêng tư &rarr; Xóa dữ liệu tài khoản</strong>.</li>
+          <li><strong>Yêu cầu xóa hoàn toàn tài khoản đăng nhập:</strong> Xem hướng dẫn chi tiết tại <a href="account-deletion.html">Trang xóa tài khoản &amp; dữ liệu</a>.</li>
+        </ul>
+
+        <h3>3. Khi gửi báo lỗi qua email</h3>
+        <p>Để chúng tôi hỗ trợ nhanh hơn, vui lòng ghi rõ trong email gửi tới <a href="mailto:dungpasoftware@gmail.com">dungpasoftware@gmail.com</a>:</p>
+        <ul>
+          <li>Thiết bị và phiên bản hệ điều hành (iOS hoặc Android).</li>
+          <li>Phiên bản ứng dụng (<code>1.0.0</code>) và chế độ đang dùng (Tài khoản mẫu hay Tài khoản đăng nhập).</li>
+          <li>Mô tả ngắn các bước dẫn tới sự cố hoặc ảnh chụp màn hình (nếu có).</li>
+        </ul>
+      </section>
+
+      <section id="en" lang="en" class="lang-section">
+        <h2>English (en-US) — Support Center</h2>
+
+        <div class="card-soft">
+          <p><strong>Direct support contact:</strong> Email <a href="mailto:dungpasoftware@gmail.com">dungpasoftware@gmail.com</a>. We aim to respond within <strong>2&ndash;3 business days</strong>.</p>
+        </div>
+
+        <h3>1. Frequently Asked Questions</h3>
+
+        <div class="card">
+          <p><strong>Can I explore Goal Partner without creating an account?</strong></p>
+          <p>Yes. On the sign-in screen, select <strong>Dùng tài khoản mẫu</strong> (Demo Mode) to explore the full workspace immediately with pre-seeded sample goals and tasks. All Demo Mode data is stored locally on your device via <code>AsyncStorage</code> with zero server sync.</p>
+        </div>
+
+        <div class="card">
+          <p><strong>How does Busy-Day Mode (&ldquo;Hôm nay mình hơi bận&rdquo;) work?</strong></p>
+          <p>In the <strong>Hôm nay</strong> (Today) tab, tap <strong>Hôm nay mình hơi bận</strong> on overwhelming days to preview and apply a realistic mini-step so you keep momentum without burning out. You can revert immediately using <strong>Hoàn tác</strong> (Undo).</p>
+        </div>
+
+        <div class="card">
+          <p><strong>Why are Sign in with Apple, Google, or Phone OTP shown as unavailable in some builds?</strong></p>
+          <p>Account sign-in methods require backend Supabase Auth configuration in the build. When backend auth is not configured, those buttons are shown in an honest disabled state while offline <strong>Demo Mode</strong> remains fully available.</p>
+        </div>
+
+        <div class="card">
+          <p><strong>What language does Goal Partner 1.0.0 use?</strong></p>
+          <p>The current 1.0.0 in-app user interface is authored in Vietnamese, while store support, privacy documentation, and account-deletion assistance are available in both Vietnamese and English.</p>
+        </div>
+
+        <h3>2. Data Reset &amp; Account Deletion</h3>
+        <ul>
+          <li><strong>Reset on-device Demo data:</strong> Open <strong>Cá nhân &rarr; Dữ liệu &amp; quyền riêng tư &rarr; Xóa dữ liệu bản mẫu</strong>.</li>
+          <li><strong>Delete signed-in Account workspace data:</strong> Open <strong>Cá nhân &rarr; Dữ liệu &amp; quyền riêng tư &rarr; Xóa dữ liệu tài khoản</strong>.</li>
+          <li><strong>Request full authentication account deletion:</strong> Follow the instructions on our <a href="account-deletion.html">Account &amp; Data Deletion page</a>.</li>
+        </ul>
+
+        <h3>3. Reporting an Issue</h3>
+        <p>When emailing <a href="mailto:dungpasoftware@gmail.com">dungpasoftware@gmail.com</a>, please include:</p>
+        <ul>
+          <li>Your device model and OS version (iOS or Android).</li>
+          <li>App version (<code>1.0.0</code>) and whether you are using Demo Mode or Account Mode.</li>
+          <li>Brief steps to reproduce the issue (and screenshots if helpful).</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Goal Partner (<code>com.daymanondev.goalpartner</code>) · <a href="./">Privacy Policy</a> · <a href="account-deletion.html">Account Deletion</a> · <a href="mailto:dungpasoftware@gmail.com">dungpasoftware@gmail.com</a></p>
+    </footer>
+  </div>
+</body>
+</html>
